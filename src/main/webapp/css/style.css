@@ -1,4 +1,5 @@
-
+/* Ocean View Resort - Room Reservation System Styles */
+/* Color Scheme: #EBF4DD, #90AB8B, #5A7863, #3B4953 */
 
 * {
     margin: 0;
@@ -20,7 +21,7 @@ body {
     padding: 20px;
 }
 
-
+/* Header Styles */
 .header {
     background-color: #5A7863;
     color: #EBF4DD;
@@ -38,10 +39,54 @@ body {
     align-items: center;
 }
 
+.resort-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.resort-location {
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .user-info span {
+    font-size: 0.9em;
+}
+
+/* Navigation Styles */
 .nav {
     background-color: #3B4953;
     padding: 15px 0;
     margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(59, 73, 83, 0.2);
+}
+
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav a {
@@ -49,23 +94,91 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: background-color 0.3s;
     font-weight: 500;
 }
 
+.nav a:hover {
+    background-color: #5A7863;
+}
 
+.nav a.active {
+    background-color: #90AB8B;
+    color: #3B4953;
+}
+
+/* Card Styles */
 .card {
     background-color: #EBF4DD;
     border-radius: 10px;
     padding: 25px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(59, 73, 83, 0.1);
 }
 
+.card h2 {
+    color: #3B4953;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #90AB8B;
+    padding-bottom: 10px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3B4953;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #90AB8B;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #3B4953;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5A7863;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Button Styles */
 .btn {
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
+    transition: all 0.3s;
     font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .btn-primary {
@@ -73,11 +186,361 @@ body {
     color: #EBF4DD;
 }
 
+.btn-primary:hover {
+    background-color: #3B4953;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 73, 83, 0.3);
+}
 
+.btn-secondary {
+    background-color: #90AB8B;
+    color: #3B4953;
+}
+
+.btn-secondary:hover {
+    background-color: #5A7863;
+    color: #EBF4DD;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
+
+.btn-success {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #2e7d32;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(59, 73, 83, 0.1);
+}
+
+table th {
+    background-color: #5A7863;
+    color: #EBF4DD;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #90AB8B;
+    color: #3B4953;
+}
+
+table tr:hover {
+    background-color: #EBF4DD;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #EBF4DD;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-badge.confirmed {
+    background-color: #90AB8B;
+}
+
+.status-badge.complete {
+    background-color: #5A7863;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #d32f2f;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #388e3c;
+    transition: opacity 0.5s ease;
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-left: 4px solid #1976d2;
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #EBF4DD;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(59, 73, 83, 0.3);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #3B4953;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Search Box Styles */
+.search-box {
+    background-color: #EBF4DD;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(59, 73, 83, 0.1);
+}
+
+.search-box form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 2px solid #90AB8B;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Search Highlight Styles */
+.reservation-row.search-match {
+    background-color: #EBF4DD !important;
+    border-left: 4px solid #5A7863;
+}
+
+.reservation-row.search-match:hover {
+    background-color: #d4e4c8 !important;
+}
+
+.search-highlight {
+    background-color: #ffeb3b;
+    color: #3B4953;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.reservation-row.no-match {
+    display: none;
+}
+
+/* Bill Print Styles */
+.bill-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(59, 73, 83, 0.1);
+}
+
+.receipt {
+    max-width: 380px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px dashed #90AB8B;
+    border-radius: 8px;
+    padding: 18px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    color: #111;
+}
+
+.receipt .r-center { text-align: center; }
+.receipt .r-title { font-size: 16px; font-weight: 800; letter-spacing: 0.5px; }
+.receipt .r-subtitle { font-size: 11px; margin-top: 2px; }
+.receipt .r-divider { border-top: 1px dashed #999; margin: 10px 0; }
+.receipt .r-section-title { font-size: 11px; font-weight: 700; margin: 6px 0 4px; }
+.receipt .r-total { font-size: 12px; font-weight: 900; }
+.receipt .r-footnote { font-size: 10px; color: #444; }
+
+.receipt .r-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 11px;
+    margin: 3px 0;
+}
+.receipt .r-row .label { white-space: nowrap; }
+.receipt .r-row .value { text-align: right; word-break: break-word; }
+
+.bill-header {
+    text-align: center;
+    border-bottom: 3px solid #5A7863;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.bill-header h2 {
+    color: #3B4953;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.bill-details {
+    margin-bottom: 30px;
+}
+
+.bill-details table {
+    width: 100%;
+}
+
+.bill-total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #3B4953;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #90AB8B;
+}
+
+/* Help Section Styles */
+.help-section {
+    margin-bottom: 30px;
+}
+
+.help-section h3 {
+    color: #5A7863;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.help-section ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.help-section li {
+    margin-bottom: 10px;
+    color: #3B4953;
+}
+
+/* Footer Styles */
 .footer {
     background-color: #3B4953;
     color: #EBF4DD;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .table-container {
+        overflow-x: scroll;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        /* 80mm thermal receipt */
+
+        margin: 2mm;
+    }
+
+    body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .header,
+    .nav,
+    .btn,
+    .footer {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bill-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: none;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .receipt {
+        width: 76mm; /* 80mm paper - ~2mm margins each side */
+        max-width: 76mm;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .receipt .r-title { font-size: 14px; }
 }
